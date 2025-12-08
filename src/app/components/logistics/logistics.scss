@@ -1,0 +1,22 @@
+$main-color : #171F61;
+$second-color:#3A55EA;
+
+.logistics-section {
+  .workshop-card, .rental-card {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .card-img-top {
+      height: 250px;
+    }
+
+    .card-title {
+      font-size: 1.5rem;
+    }
+
+  }
+}

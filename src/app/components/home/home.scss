@@ -1,0 +1,28 @@
+.home{
+  height: 100vh !important;
+  background: linear-gradient(to right, #000000c7 40%, #ffffff83), url('/assets/images/home-images/home-bg.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  .title{
+    h1{
+      width: 75%;
+    }
+  }
+}
+@media (max-width:768px) {
+  .home{
+    background: linear-gradient(to bottom, #000000c7 40%, #ffffff83), url('/assets/images/home-images/home-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    .title {
+      h1{
+        width: 100%;
+        font-size: 24px;
+      }
+      p{
+        font-size: 14px;
+      }
+    }
+  }
+}

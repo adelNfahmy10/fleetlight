@@ -1,0 +1,27 @@
+$main-color : #171F61;
+$second-color:#3A55EA;
+
+.equipment-brands-section {
+  background-color: #ffffff;
+
+  .brand-logo {
+    box-shadow: 0 0 3px $main-color !important;
+    border-radius: 20px;
+    img{
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      opacity: 0.8;
+      transition: 0.3s ease;
+    }
+  }
+
+  swiper-slide {
+    &:hover .brand-logo {
+      transform: scale(1.05);
+      img{
+        opacity: 1;
+      }
+    }
+  }
+}
