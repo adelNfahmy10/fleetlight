@@ -22,13 +22,7 @@
       loop="true"
       pagination="false"
       navigation="false"
-      breakpoints='{
-        "100": { "slidesPerView": 1 },
-        "200": { "slidesPerView": 1 },
-        "320": { "slidesPerView": 2 },
-        "768": { "slidesPerView": 4 },
-        "992": { "slidesPerView": 6 }
-      }'
+      [breakpoints]='swiperConfig.breakpoints'
     >
 
       <swiper-slide class="cr d-flex justify-content-center align-items-center my-3 px-1">
