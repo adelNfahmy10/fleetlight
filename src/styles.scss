@@ -4,7 +4,10 @@ $second-color:#3A55EA;
 *{
   transition: all .3s;
 }
-
+a{
+  text-decoration: none;
+  color: #222;
+}
 h2{
   color: $main-color;
 }

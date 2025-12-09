@@ -1,0 +1,36 @@
+$main-color : #171F61;
+$second-color:#3A55EA;
+footer{
+  background-color: $main-color;
+  color: #fff;
+}
+.logo{
+  .logo-img{
+    width: 100px;
+  }
+}
+a{
+  color: #fff;
+}
+p{
+  color: #fff;
+}
+h5{
+  color: #fff;
+}
+i{
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  background-color: $second-color;
+  display: inline-block;
+  color: #fff;
+  &:hover{
+    background-color: #203087;
+  }
+}
+.copy-right{
+  background-color: $second-color;
+}
