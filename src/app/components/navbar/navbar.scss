@@ -1,5 +1,6 @@
-$main-color : #171F61;
-$second-color:#3A55EA;
+$main-color : #2A39AD;
+$second-color:#2449E0;
+
 *{
   transition: all .3s;
 }
@@ -7,7 +8,7 @@ nav{
   background-color: #f8f8f8;
   backdrop-filter: blur(5px);
   .logo{
-    width: 60px;
+    width: 80px;
     @media (max-width:567px) {
       width: 40px;
     }

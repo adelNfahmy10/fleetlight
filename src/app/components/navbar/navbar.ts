@@ -12,9 +12,11 @@ export class Navbar {
 
   sections = [
     { id: 'home', name: 'Home' },
-    { id: 'service', name: 'Services' },
-    { id: 'rental', name: 'Rental' },
-    { id: 'why-us', name: 'Why Us' },
+    { id: 'spare-parts', name: 'Saper Parts' },
+    { id: 'equipment-brands', name: 'Equipment Brands' },
+    { id: 'equipment', name: 'Equipment' },
+    { id: 'logistics', name: 'Logistics' },
+    { id: 'trust', name: 'Why Us' },
   ];
   activeLink: string = 'home';
 

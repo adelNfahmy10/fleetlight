@@ -1,3 +1,6 @@
+$main-color : #2A39AD;
+$second-color:#2449E0;
+
 .home{
   height: 100vh !important;
   background: linear-gradient(to right, #000000c7 40%, #ffffff83), url('/assets/images/home-images/home-bg.jpg');
@@ -11,8 +14,24 @@
     p{
       font-size: 20px;
     }
+    .input-group {
+      width: 60%;
+      .input-group-text{
+        background-color: $main-color;
+        border-color: $main-color;
+      }
+      input {
+        color: #fff;
+        backdrop-filter: blur(50px);
+        border: 1px solid $main-color;
+        &::placeholder {
+          color: #ccc;
+        }
+      }
+    }
   }
 }
+
 @media (max-width:768px) {
   .home{
     background: linear-gradient(to bottom, #000000c7 40%, #ffffff83), url('/assets/images/home-images/home-bg.jpg');
@@ -25,6 +44,9 @@
       }
       p{
         font-size: 16px;
+      }
+      .input-group {
+        width: 100%;
       }
     }
   }
