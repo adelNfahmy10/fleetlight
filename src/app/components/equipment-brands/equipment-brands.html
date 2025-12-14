@@ -4,94 +4,43 @@
     <!-- Title -->
     <div class="text-center mb-4">
       <h2>
-        Experts in What Matters
+        خبراء فيما يهمك
       </h2>
-      <h5>Covering the World's Leading Heavy Equipment Brands</h5>
+      <h5>
+        نغطي أشهر وأقوى علامات المعدات الثقيلة عالميًا
+      </h5>
     </div>
 
     <!-- CTA -->
     <button class="btn second-btn">
-      View All
+      عرض الكل
     </button>
 
+
     <!-- Logos Slider -->
-    <swiper-container
-      slides-per-view="6"
-      space-between="10"
-      autoplay-delay="2500"
-      loop="true"
-      pagination="false"
-      navigation="false"
-      [breakpoints]='swiperConfig.breakpoints'
-    >
+    @if(isBrowser){
+      <swiper-container
+        dir="rtl"
+        slides-per-view="6"
+        space-between="10"
+        autoplay-delay="2500"
+        loop="true"
+        pagination="false"
+        navigation="false"
+        [breakpoints]="swiperConfig.breakpoints"
+      >
 
-      <swiper-slide class="cr d-flex justify-content-center align-items-center my-3 px-1">
-        <div class="brand-logo d-flex justify-content-center align-items-center w-100 h-100 rounded-4 p-2">
-          <img src="assets/images/equipment-images/toyota-colored.png" alt="Caterpillar">
-        </div>
-      </swiper-slide>
+        @for (brand of equipmentBrands; track $index) {
+          <swiper-slide class="cr d-flex justify-content-center align-items-center my-3 px-1" >
+            <div class="brand-logo d-flex justify-content-center align-items-center w-100 h-100 rounded-4 p-2" >
+              <img [src]="brand.image" [alt]="brand.name" loading="lazy" >
+              <span class="brand-name">{{brand.name}}</span>
+            </div>
+          </swiper-slide>
+        }
 
-      <swiper-slide class="cr d-flex justify-content-center align-items-center my-3 px-1">
-        <div class="brand-logo d-flex justify-content-center align-items-center w-100 h-100 rounded-4 p-2">
-          <img src="assets/images/equipment-images/bmw-colored.png" alt="Caterpillar">
-        </div>
-      </swiper-slide>
-
-      <swiper-slide class="cr d-flex justify-content-center align-items-center my-3 px-1">
-        <div class="brand-logo d-flex justify-content-center align-items-center w-100 h-100 rounded-4 p-2">
-          <img src="assets/images/equipment-images/changan-colored.png" alt="Caterpillar">
-        </div>
-      </swiper-slide>
-
-      <swiper-slide class="cr d-flex justify-content-center align-items-center my-3 px-1">
-        <div class="brand-logo d-flex justify-content-center align-items-center w-100 h-100 rounded-4 p-2">
-          <img src="assets/images/equipment-images/chevrolet-colored.png" alt="Caterpillar">
-        </div>
-      </swiper-slide>
-
-      <swiper-slide class="cr d-flex justify-content-center align-items-center my-3 px-1">
-        <div class="brand-logo d-flex justify-content-center align-items-center w-100 h-100 rounded-4 p-2">
-          <img src="assets/images/equipment-images/ford-colored.png" alt="Caterpillar">
-        </div>
-      </swiper-slide>
-
-      <swiper-slide class="cr d-flex justify-content-center align-items-center my-3 px-1">
-        <div class="brand-logo d-flex justify-content-center align-items-center w-100 h-100 rounded-4 p-2">
-          <img src="assets/images/equipment-images/gmc-colored.png" alt="Caterpillar">
-        </div>
-      </swiper-slide>
-
-      <swiper-slide class="cr d-flex justify-content-center align-items-center my-3 px-1">
-        <div class="brand-logo d-flex justify-content-center align-items-center w-100 h-100 rounded-4 p-2">
-          <img src="assets/images/equipment-images/honda-colored.png" alt="Caterpillar">
-        </div>
-      </swiper-slide>
-
-      <swiper-slide class="cr d-flex justify-content-center align-items-center my-3 px-1">
-        <div class="brand-logo d-flex justify-content-center align-items-center w-100 h-100 rounded-4 p-2">
-          <img src="assets/images/equipment-images/hyundai-colored.png" alt="Caterpillar">
-        </div>
-      </swiper-slide>
-
-      <swiper-slide class="cr d-flex justify-content-center align-items-center my-3 px-1">
-        <div class="brand-logo d-flex justify-content-center align-items-center w-100 h-100 rounded-4 p-2">
-          <img src="assets/images/equipment-images/kia-colored.png" alt="Caterpillar">
-        </div>
-      </swiper-slide>
-
-      <swiper-slide class="cr d-flex justify-content-center align-items-center my-3 px-1">
-        <div class="brand-logo d-flex justify-content-center align-items-center w-100 h-100 rounded-4 p-2">
-          <img src="assets/images/equipment-images/lexus-colored.png" alt="Caterpillar">
-        </div>
-      </swiper-slide>
-
-      <swiper-slide class="cr d-flex justify-content-center align-items-center my-3 px-1">
-        <div class="brand-logo d-flex justify-content-center align-items-center w-100 h-100 rounded-4 p-2">
-          <img src="assets/images/equipment-images/nissan-colored.png" alt="Caterpillar">
-        </div>
-      </swiper-slide>
-
-    </swiper-container>
+      </swiper-container>
+    }
 
   </div>
 </section>

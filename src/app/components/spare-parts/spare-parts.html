@@ -1,157 +1,59 @@
 <section id="spare-parts" class="spare-parts-section py-5">
   <div class="container">
-
     <!-- Title -->
-     <div class="text-center mb-4">
+    <div class="text-center mb-4">
       <h2>
-        Thousands of Parts Ready to Ship
+        آلاف قطع الغيار الجاهزة للشحن
       </h2>
-      <h5>Easily find the exact spare part you need with our advanced search system.</h5>
+      <h5>
+        اعثر بسهولة على قطعة الغيار المناسبة من خلال نظام البحث المتقدم لدينا.
+      </h5>
     </div>
 
-     <!-- CTA -->
+    <!-- CTA -->
     <button class="btn second-btn mb-2">
-      View All
+      عرض الكل
     </button>
+
     <!-- Swiper Slider -->
-    <swiper-container
-      slides-per-view="4"
-      space-between="20"
-      navigation="true"
-      pagination="false"
-      [breakpoints]='swiperConfig.breakpoints'
-    >
-      <!-- Slide 1 -->
-      <swiper-slide class="my-2">
-        <div class="product-card p-3 border rounded-4 text-center">
-          <img src="assets/images/saper-images/slider-1.jpg" class="img-fluid mb-3">
-          <div>
-            <h6 class="brand-name">Caterpillar</h6>
-            <p class="product-price">
-              <svg class="money-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1124.14 1256.39" ><path d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z"></path><path d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z"></path></svg>
-              120
-            </p>
-            <button class="btn main-btn w-100 mt-3"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
-          </div>
-          <span class="px-3 part ribbon">FL-4587X</span>
-          <span class="px-3 type ribbon">Original</span>
-        </div>
-      </swiper-slide>
+    @if(isBrowser){
+      <swiper-container
+        dir="rtl"
+        slides-per-view="4"
+        space-between="20"
+        navigation="true"
+        pagination="false"
+        [breakpoints]="swiperConfig.breakpoints"
+      >
+        @for (part of spareParts; track $index) {
+          <swiper-slide class="my-2">
+            <div class="product-card p-3 border rounded-4 text-center">
+              <img [src]="part.image" class="img-fluid mb-3">
 
-      <swiper-slide class="my-2">
-        <div class="product-card p-3 border rounded-4 text-center">
-          <img src="assets/images/saper-images/slider-1.jpg" class="img-fluid mb-3">
-          <div>
-            <h6 class="brand-name">Komatsu</h6>
-            <p class="product-price">
-              <svg class="money-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1124.14 1256.39" ><path d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z"></path><path d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z"></path></svg>
-              100
-            </p>
-            <button class="btn main-btn w-100 mt-3"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
-          </div>
-          <span class="px-3 part ribbon">FL-9821B</span>
-          <span class="px-3 type ribbon">Original</span>
-        </div>
-      </swiper-slide>
+              <div>
+                <h6 class="brand-name">{{ part.brand }}</h6>
 
-      <swiper-slide class="my-2">
-        <div class="product-card p-3 border rounded-4 text-center">
-          <img src="assets/images/saper-images/slider-1.jpg" class="img-fluid mb-3">
-          <div>
-            <h6 class="brand-name">Volvo</h6>
-            <p class="product-price">
-              <svg class="money-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1124.14 1256.39" ><path d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z"></path><path d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z"></path></svg>
-              90
-            </p>
-            <button class="btn main-btn w-100 mt-3"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
-          </div>
-          <span class="px-3 part ribbon">FL-7745Q</span>
-          <span class="px-3 type ribbon">Original</span>
-        </div>
-      </swiper-slide>
+                <p class="product-price">
+                  <svg class="money-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1124.14 1256.39">
+                    <path d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z"></path>
+                    <path d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z"></path>
+                  </svg>
+                  {{ part.price }}
+                </p>
 
-      <swiper-slide class="my-2">
-        <div class="product-card p-3 border rounded-4 text-center">
-          <img src="assets/images/saper-images/slider-1.jpg" class="img-fluid mb-3">
-          <div>
-            <h6 class="brand-name">Hitachi</h6>
-            <p class="product-price">
-              <svg class="money-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1124.14 1256.39" ><path d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z"></path><path d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z"></path></svg>
-              74
-            </p>
-            <button class="btn main-btn w-100 mt-3"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
-          </div>
-          <span class="px-3 part ribbon">FL-3310A</span>
-          <span class="px-3 type ribbon">Original</span>
-        </div>
-      </swiper-slide>
+                <button class="btn main-btn w-100 mt-3">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  أضف إلى السلة
+                </button>
+              </div>
 
-      <swiper-slide class="my-2">
-        <div class="product-card p-3 border rounded-4 text-center">
-          <img src="assets/images/saper-images/slider-1.jpg" class="img-fluid mb-3">
-          <div>
-            <h6 class="brand-name">Hitachi</h6>
-            <p class="product-price">
-              <svg class="money-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1124.14 1256.39" ><path d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z"></path><path d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z"></path></svg>
-              88
-            </p>
-            <button class="btn main-btn w-100 mt-3"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
-          </div>
-          <span class="px-3 part ribbon">FL-3310A</span>
-          <span class="px-3 type ribbon">Original</span>
-        </div>
-      </swiper-slide>
-
-      <swiper-slide class="my-2">
-        <div class="product-card p-3 border rounded-4 text-center">
-          <img src="assets/images/saper-images/slider-1.jpg" class="img-fluid mb-3">
-          <div>
-            <h6 class="brand-name">Hitachi</h6>
-            <p class="product-price">
-              <svg class="money-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1124.14 1256.39" ><path d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z"></path><path d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z"></path></svg>
-              90
-            </p>
-            <button class="btn main-btn w-100 mt-3"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
-          </div>
-          <span class="px-3 part ribbon">FL-3310A</span>
-          <span class="px-3 type ribbon">Original</span>
-        </div>
-      </swiper-slide>
-
-      <swiper-slide class="my-2">
-        <div class="product-card p-3 border rounded-4 text-center">
-          <img src="assets/images/saper-images/slider-1.jpg" class="img-fluid mb-3">
-          <div>
-            <h6 class="brand-name">Hitachi</h6>
-            <p class="product-price">
-              <svg class="money-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1124.14 1256.39" ><path d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z"></path><path d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z"></path></svg>
-              210
-            </p>
-            <button class="btn main-btn w-100 mt-3"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
-          </div>
-          <span class="px-3 part ribbon">FL-3310A</span>
-          <span class="px-3 type ribbon">Original</span>
-        </div>
-      </swiper-slide>
-
-      <swiper-slide class="my-2">
-        <div class="product-card p-3 border rounded-4 text-center">
-          <img src="assets/images/saper-images/slider-1.jpg" class="img-fluid mb-3">
-          <div>
-            <h6 class="brand-name">Hitachi</h6>
-            <p class="product-price">
-              <svg class="money-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1124.14 1256.39" ><path d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z"></path><path d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z"></path></svg>
-              40
-            </p>
-            <button class="btn main-btn w-100 mt-3"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
-          </div>
-          <span class="px-3 part ribbon">FL-3310A</span>
-          <span class="px-3 type ribbon">Original</span>
-        </div>
-      </swiper-slide>
-
-    </swiper-container>
-
+              <span class="px-3 part ribbon">{{ part.code }}</span>
+              <span class="px-3 type ribbon">{{ part.type }}</span>
+            </div>
+          </swiper-slide>
+        }
+      </swiper-container>
+    }
 
   </div>
 </section>

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg px-2 px-lg-5" >
+<!-- <nav class="navbar navbar-expand-lg px-2 px-lg-5" >
   <ul class="navbar-nav gap-1 d-lg-none d-flex flex-row justify-content-center mt-2 mt-sm-0">
     <li class="nav-item">
       <i class="fa-solid fa-cart-shopping cr"></i>
@@ -34,16 +34,6 @@
           </a>
         </li>
       }
-      <!-- <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle px-3 px-lg-0" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Spare Parts Market
-        </a>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item">Action</a></li>
-          <li><a class="dropdown-item">Another action</a></li>
-          <li><a class="dropdown-item">Something else here</a></li>
-        </ul>
-      </li> -->
     </ul>
 
     <ul class="navbar-nav d-lg-flex d-none justify-content-center gap-3 mt-2 mt-sm-0">
@@ -55,6 +45,85 @@
       </li>
       <li class="nav-item btn-lang">
         <span class="rounded-5 p-3 py-1 border border-1 border-black cr">E</span>
+      </li>
+    </ul>
+  </div>
+</nav> -->
+
+
+
+
+<nav class="navbar navbar-expand-lg px-2 px-lg-5">
+
+  <!-- Mobile Icons -->
+  <ul class="navbar-nav gap-1 d-lg-none d-flex flex-row justify-content-center mt-2 mt-sm-0">
+    <li class="nav-item">
+      <i class="fa-solid fa-cart-shopping cr" title="سلة المشتريات"></i>
+    </li>
+    <li class="nav-item">
+      <i class="fa-regular fa-circle-user cr" title="حسابي"></i>
+    </li>
+    <li class="nav-item btn-lang" (click)="toggleDir()">
+      <span class="rounded-5 py-0 px-2 border border-1 cr">
+        {{ isRtl ? 'EN' : 'ع' }}
+      </span>
+    </li>
+  </ul>
+
+  <!-- Logo -->
+  <a class="navbar-brand cr" (click)="scrollToSection('home')">
+    <img
+      loading="lazy"
+      src="assets/images/navbar-images/logo-white-nav.png"
+      class="fleetlight logo"
+      alt="فليت لايت"
+    >
+  </a>
+
+  <!-- Toggler -->
+  <button
+    class="navbar-toggler border-0"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="القائمة"
+  >
+    <span class="navbar-toggler-icon d-flex justify-content-center align-items-center">
+      <i class="fa-brands fa-nfc-symbol text-dark fs-2"></i>
+    </span>
+  </button>
+
+  <!-- Menu -->
+  <div class="collapse navbar-collapse list-Item" id="navbarSupportedContent">
+    <ul class="navbar-nav mx-auto gap-4">
+      @for (section of sections; track $index) {
+        <li class="nav-item">
+          <a
+            class="nav-link rounded-2 px-3 px-sm-0"
+            href="javascript:void(0)"
+            (click)="scrollToSection(section.id)"
+            [ngClass]="{'active': activeLink === section.id}"
+          >
+            {{ section.name }}
+          </a>
+        </li>
+      }
+    </ul>
+
+    <!-- Desktop Icons -->
+    <ul class="navbar-nav d-lg-flex d-none justify-content-center gap-3 mt-2 mt-sm-0">
+      <li class="nav-item">
+        <i class="fa-solid fa-cart-shopping cr" title="سلة المشتريات"></i>
+      </li>
+      <li class="nav-item">
+        <i class="fa-regular fa-circle-user cr" title="حسابي"></i>
+      </li>
+      <li class="nav-item btn-lang" (click)="toggleDir()">
+        <span class="rounded-5 py-0 px-2 border border-1 cr">
+          {{ isRtl ? 'EN' : 'ع' }}
+        </span>
       </li>
     </ul>
   </div>

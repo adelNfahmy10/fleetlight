@@ -7,12 +7,29 @@ $second-color:#2449E0;
   .brand-logo {
     box-shadow: 0 0 3px $main-color !important;
     border-radius: 20px;
+    position: relative;
+    overflow: hidden;
     img{
       width: 100px;
       height: 100px;
       object-fit: contain;
       opacity: 0.8;
       transition: 0.3s ease;
+    }
+    .brand-name{
+      position: absolute;
+      top: 0;
+      right: -100%;
+      background-color: $main-color;
+      color: #fff;
+      padding: 0 20px;
+      border-top-right-radius: 15px;
+      border-bottom-left-radius: 15px;
+    }
+    &:hover{
+      .brand-name{
+        right: 0;
+      }
     }
   }
 
