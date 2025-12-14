@@ -27,9 +27,15 @@ export class Navbar {
     if (this._BrowserService.isBrowser) {
       const storedDir = localStorage.getItem('dir');
       if (storedDir) {
+        // لو فيه قيمة مخزنة استخدمها
         this.isRtl = storedDir === 'rtl';
-        document.documentElement.setAttribute('dir', storedDir);
+      } else {
+        // الافتراضي عربي
+        this.isRtl = true;
       }
+
+      // ضع الاتجاه في html
+      document.documentElement.setAttribute('dir', this.isRtl ? 'rtl' : 'ltr');
     }
   }
 
