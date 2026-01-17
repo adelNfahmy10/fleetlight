@@ -1,0 +1,655 @@
+$main-color : #2A39AD;
+$second-color:#244ae0a1;
+
+.home{
+  height: 80vh !important;
+  background: linear-gradient(to left, #000000c7 40%, #ffffff83), url('/assets/images/home-images/home-bg.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.trust-section {
+  background: #f8f9fa;
+  .head-section{
+    h2{
+      position: relative;
+      margin: 0 auto;
+      width: fit-content;
+      &::before{
+        content: '';
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 70%;
+        height: 5px;
+        background:linear-gradient(to right, $main-color 0% 20%, $second-color 30% 60%,  $main-color 75% 100%);
+        border-radius: 100%;
+        animation: pulseLine 5s ease ;
+      }
+    }
+  }
+
+  .slider-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+
+    &::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 4px;
+      background-color: $main-color;
+      transition: all .4s ease-in-out;
+    }
+
+    &::after{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 0;
+      height: 4px;
+      background-color: $main-color;
+      transition: all .4s ease-in-out;
+    }
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 20px $second-color;
+      &::before, &::after{
+        width: 100%;
+      }
+    }
+
+    img{
+      width: 120px;
+      height: 120px;
+    }
+
+    .card-title {
+      font-size: 1.5rem;
+    }
+
+    .card-text {
+      font-size: 0.95rem;
+    }
+
+    button{
+      font-size: 14px;
+    }
+  }
+
+  .about-us{
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 10px #0000003f;
+    &::after{
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      width: 4px;
+      height: 30%;
+      background-color: $main-color;
+      transition: all .4s ease-in-out;
+      border-radius: 100%;
+    }
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 20px $second-color;
+       &::after{
+        height: 100%;
+        border-radius: 0;
+      }
+    }
+
+    .about-info{
+      .title{
+        position: relative;
+        &::before{
+          content: '';
+          position: absolute;
+          right: 0;
+          bottom: -5px;
+          height: 4px;
+          width: 40px;
+          background-color: $main-color;
+          border-radius: 100%;
+        }
+      }
+    }
+
+    .about-list{
+      .sub-title{
+        position: relative;
+        &::before{
+          content: '';
+          position: absolute;
+          right: 0;
+          bottom: -10px;
+          height: 4px;
+          width: 100px;
+          background-color: $main-color;
+          border-radius: 100%;
+        }
+      }
+
+      .about-item{
+        background-color: #244ae00d;
+        margin-bottom: 10px;
+        padding: 10px;
+        position: relative;
+        border-radius: 10px;
+        &::before{
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 100%;
+          width: 4px;
+          background-color: $main-color;
+          border-radius: 50%;
+        }
+        &:hover{
+          transform: scale(1.02);
+        }
+      }
+    }
+  }
+
+  .what-fleetlight-offers{
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 10px #0000003f;
+    &::after{
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 4px;
+      height: 30%;
+      background-color: $main-color;
+      transition: all .4s ease-in-out;
+      border-radius: 100%;
+    }
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 20px $second-color;
+      &::after{
+        height: 100%;
+        border-radius: 0;
+      }
+    }
+
+    .title{
+      position: relative;
+      &::before{
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: -5px;
+        height: 4px;
+        width: 40px;
+        background-color: $main-color;
+        border-radius: 100%;
+      }
+    }
+
+    .sub-title{
+      position: relative;
+      &::before{
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: -10px;
+        height: 4px;
+        width: 100px;
+        background-color: $main-color;
+        border-radius: 100%;
+      }
+    }
+
+    .what-fleetlight-item{
+      background-color: #244ae00d;
+      margin-bottom: 10px;
+      padding: 10px;
+      position: relative;
+      border-radius: 10px;
+      &::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 4px;
+        background-color: $main-color;
+        border-radius: 50%;
+      }
+      &:hover{
+        transform: scale(1.02);
+      }
+    }
+  }
+
+  .how-it-works{
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 10px #0000003f;
+    &::after{
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      width: 4px;
+      height: 30%;
+      background-color: $main-color;
+      transition: all .4s ease-in-out;
+      border-radius: 100%;
+    }
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 20px $second-color;
+      &::after{
+        height: 100%;
+        border-radius: 0;
+      }
+    }
+
+    .title{
+      position: relative;
+      &::before{
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: -5px;
+        height: 4px;
+        width: 40px;
+        background-color: $main-color;
+        border-radius: 100%;
+      }
+    }
+
+    .sub-title{
+      position: relative;
+      &::before{
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: -10px;
+        height: 4px;
+        width: 100px;
+        background-color: $main-color;
+        border-radius: 100%;
+      }
+    }
+
+    .how-works-item{
+      background-color: #244ae00d;
+      margin-bottom: 10px;
+      padding: 10px;
+      position: relative;
+      border-radius: 10px;
+      &::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 4px;
+        background-color: $main-color;
+        border-radius: 50%;
+      }
+      &:hover{
+        transform: scale(1.02);
+      }
+    }
+  }
+
+  .special-feature{
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 10px #0000003f;
+    &::after{
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 4px;
+      height: 30%;
+      background-color: $main-color;
+      transition: all .4s ease-in-out;
+      border-radius: 100%;
+    }
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 20px $second-color;
+      &::after{
+        height: 100%;
+        border-radius: 0;
+      }
+    }
+
+    .title{
+      position: relative;
+      &::before{
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: -5px;
+        height: 4px;
+        width: 40px;
+        background-color: $main-color;
+        border-radius: 100%;
+      }
+    }
+
+    .sub-title{
+      position: relative;
+      &::before{
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: -10px;
+        height: 4px;
+        width: 100px;
+        background-color: $main-color;
+        border-radius: 100%;
+      }
+    }
+
+    .special-item{
+      background-color: #244ae00d;
+      margin-bottom: 10px;
+      padding: 10px;
+      position: relative;
+      border-radius: 10px;
+      &::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 4px;
+        background-color: $main-color;
+        border-radius: 50%;
+      }
+      &:hover{
+        transform: scale(1.02);
+      }
+    }
+  }
+
+  .who-benefits{
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 10px #0000003f;
+    &::after{
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      width: 4px;
+      height: 30%;
+      background-color: $main-color;
+      transition: all .4s ease-in-out;
+      border-radius: 100%;
+    }
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 20px $second-color;
+      &::after{
+        height: 100%;
+        border-radius: 0;
+      }
+    }
+
+    .title{
+      position: relative;
+      &::before{
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: -5px;
+        height: 4px;
+        width: 40px;
+        background-color: $main-color;
+        border-radius: 100%;
+      }
+    }
+
+    .sub-title{
+      position: relative;
+      &::before{
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: -10px;
+        height: 4px;
+        width: 40px;
+        background-color: $main-color;
+        border-radius: 100%;
+      }
+    }
+
+    .who-benefits-item{
+      background-color: #244ae00d;
+      margin-bottom: 10px;
+      padding: 10px;
+      position: relative;
+      border-radius: 10px;
+      &::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 4px;
+        background-color: $main-color;
+        border-radius: 50%;
+      }
+      &:hover{
+        transform: scale(1.02);
+      }
+    }
+  }
+
+  .vision-mission{
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 10px #0000003f;
+    &::after{
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 4px;
+      height: 30%;
+      background-color: $main-color;
+      transition: all .4s ease-in-out;
+      border-radius: 100%;
+    }
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 20px $second-color;
+      &::after{
+        height: 100%;
+        border-radius: 0;
+      }
+    }
+
+    .title{
+      position: relative;
+      &::before{
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: -5px;
+        height: 4px;
+        width: 40px;
+        background-color: $main-color;
+        border-radius: 100%;
+      }
+    }
+
+    .sub-title{
+      position: relative;
+      &::before{
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: -10px;
+        height: 4px;
+        width: 40px;
+        background-color: $main-color;
+        border-radius: 100%;
+      }
+    }
+
+    .vision-misstion-item{
+      background-color: #244ae00d;
+      margin-bottom: 10px;
+      padding: 10px;
+      position: relative;
+      border-radius: 10px;
+      &::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 4px;
+        background-color: $main-color;
+        border-radius: 50%;
+      }
+      &:hover{
+        transform: scale(1.02);
+      }
+    }
+  }
+
+  .core-values{
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 10px #0000003f;
+    &::after{
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      width: 4px;
+      height: 30%;
+      background-color: $main-color;
+      transition: all .4s ease-in-out;
+      border-radius: 100%;
+    }
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 20px $second-color;
+      &::after{
+        height: 100%;
+        border-radius: 0;
+      }
+    }
+
+    .title{
+      position: relative;
+      &::before{
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: -5px;
+        height: 4px;
+        width: 40px;
+        background-color: $main-color;
+        border-radius: 100%;
+      }
+    }
+
+    .sub-title{
+      position: relative;
+      &::before{
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: -10px;
+        height: 4px;
+        width: 40px;
+        background-color: $main-color;
+        border-radius: 100%;
+      }
+    }
+
+    .core-values-item{
+      background-color: #244ae00d;
+      margin-bottom: 10px;
+      padding: 10px;
+      position: relative;
+      border-radius: 10px;
+      &::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 4px;
+        background-color: $main-color;
+        border-radius: 50%;
+      }
+      &:hover{
+        transform: scale(1.02);
+      }
+    }
+  }
+}
+.about-nav a {
+  cursor: pointer;
+  color: #555;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s;
+}
+
+.about-nav a.active {
+  color: var(--main-color);
+  font-weight: 600;
+}
+
+.about-nav a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--main-color);
+}
+.about-nav a {
+  cursor: pointer;
+  color: #666;
+  transition: 0.3s;
+
+  &.active {
+    color: #007bff;
+    font-weight: 600;
+    border-bottom: 2px solid #007bff;
+  }
+}

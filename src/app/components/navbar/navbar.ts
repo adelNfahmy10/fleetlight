@@ -1,10 +1,11 @@
 import { isPlatformBrowser, NgClass } from '@angular/common';
 import { Component, inject, PLATFORM_ID } from '@angular/core';
 import { BrowserService } from '../../core/services/browser-check/browser-service';
+import { RouterLinkActive, RouterLinkWithHref } from "@angular/router";
 
 @Component({
   selector: 'app-navbar',
-  imports: [NgClass],
+  imports: [NgClass, RouterLinkActive, RouterLinkWithHref],
   templateUrl: './navbar.html',
   styleUrl: './navbar.scss',
 })
@@ -20,7 +21,7 @@ export class Navbar {
     { id: 'equipment-brands', name: 'ماركات المعدات' },
     { id: 'equipment', name: 'المعدات' },
     { id: 'logistics', name: 'الخدمات اللوجستية' },
-    { id: 'trust', name: 'لماذا نحن' },
+    { id: 'trust', name: 'ثقة العملاء' },
   ];
 
   ngOnInit() {
