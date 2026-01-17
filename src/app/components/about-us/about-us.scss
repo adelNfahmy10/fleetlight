@@ -7,6 +7,12 @@ $second-color:#244ae0a1;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+  .tabs{
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 .trust-section {
